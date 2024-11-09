@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -fopenmp -shared -Wl,-soname,liblockfree_linked_list.so -o liblockfree_linked_list.so CMakeFiles/lockfree_linked_list.dir/linkedlist.c.o CMakeFiles/lockfree_linked_list.dir/listbench.c.o  -latomic

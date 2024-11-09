@@ -1,0 +1,1 @@
+/usr/bin/cc -fopenmp CMakeFiles/ldoubly.dir/linkedlist.c.o CMakeFiles/ldoubly.dir/listbench.c.o -o ldoubly  -latomic

@@ -1,0 +1,1 @@
+/usr/bin/cc -fopenmp CMakeFiles/ldoubly_cursor.dir/linkedlist.c.o CMakeFiles/ldoubly_cursor.dir/listbench.c.o -o ldoubly_cursor  -latomic

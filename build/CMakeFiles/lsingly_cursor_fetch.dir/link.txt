@@ -1,0 +1,1 @@
+/usr/bin/cc -fopenmp CMakeFiles/lsingly_cursor_fetch.dir/linkedlist.c.o CMakeFiles/lsingly_cursor_fetch.dir/listbench.c.o -o lsingly_cursor_fetch  -latomic

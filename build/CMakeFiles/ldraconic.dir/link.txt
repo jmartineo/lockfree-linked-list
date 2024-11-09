@@ -1,0 +1,1 @@
+/usr/bin/cc -fopenmp CMakeFiles/ldraconic.dir/linkedlist.c.o CMakeFiles/ldraconic.dir/listbench.c.o -o ldraconic  -latomic
