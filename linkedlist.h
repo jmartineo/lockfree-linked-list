@@ -3,12 +3,6 @@
 
 #define COUNTERS
 
-#ifdef COUNTERS
-#define INC(_c) ((_c)++)
-#else
-#define INC(_c)
-#endif
-
 typedef struct _node {
   _Atomic(struct _node *) next;
   _Atomic(struct _node *) prev;
