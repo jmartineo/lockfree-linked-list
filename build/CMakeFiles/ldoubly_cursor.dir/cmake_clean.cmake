@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ldoubly_cursor.dir/link.d"
   "CMakeFiles/ldoubly_cursor.dir/linkedlist.c.o"
   "CMakeFiles/ldoubly_cursor.dir/linkedlist.c.o.d"
   "CMakeFiles/ldoubly_cursor.dir/listbench.c.o"

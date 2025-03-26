@@ -17,30 +17,30 @@ set(CMAKE_C_FLAGS "-fopenmp")
 # Link with the atomic library
 link_libraries(atomic)
 
-# Create a shared library target
-add_library(lockfree_linked_list SHARED ${SOURCE_FILES})
+# 🔹 Create shared libraries for different configurations
+macro(add_shared_lib name)
+  add_library(${name} SHARED ${SOURCE_FILES})
+  target_compile_definitions(${name} PUBLIC ${ARGN})
+endmacro()
 
-# Set any definitions for the shared library if necessary
-target_compile_definitions(lockfree_linked_list PUBLIC "")
+add_shared_lib(lockfree_linked_list TEXTBOOK)
+add_shared_lib(lockfree_linked_list_singly)       # No extra definitions
+add_shared_lib(lockfree_linked_list_doubly DOUBLY)
+add_shared_lib(lockfree_linked_list_singly_cursor CURSOR)
+add_shared_lib(lockfree_linked_list_doubly_cursor DOUBLY CURSOR)
 
-# Define executable targets
-add_executable(ldraconic ${SOURCE_FILES})
-target_compile_definitions(ldraconic PUBLIC TEXTBOOK)
+# 🔹 Create executables with matching configurations
+macro(add_exec name)
+  add_executable(${name} ${SOURCE_FILES})
+  target_compile_definitions(${name} PUBLIC ${ARGN})
+endmacro()
 
-add_executable(lsingly ${SOURCE_FILES})
-target_compile_definitions(lsingly PUBLIC "")
-
-add_executable(ldoubly ${SOURCE_FILES})
-target_compile_definitions(ldoubly PUBLIC DOUBLY)
-
-add_executable(ldoubly_cursor ${SOURCE_FILES})
-target_compile_definitions(ldoubly_cursor PUBLIC DOUBLY CURSOR)
-
-add_executable(lsingly_cursor ${SOURCE_FILES})
-target_compile_definitions(lsingly_cursor PUBLIC CURSOR)
-
-add_executable(lsingly_cursor_fetch ${SOURCE_FILES})
-target_compile_definitions(lsingly_cursor_fetch PUBLIC CURSOR FETCH)
+add_exec(ldraconic TEXTBOOK)
+add_exec(lsingly)  # No extra definitions
+add_exec(ldoubly DOUBLY)
+add_exec(ldoubly_cursor DOUBLY CURSOR)
+add_exec(lsingly_cursor CURSOR)
+add_exec(lsingly_cursor_fetch CURSOR FETCH)
 
 # Uncomment as needed for additional executables
 # add_executable(lprivate ${SOURCE_FILES})

@@ -1,4 +1,8 @@
 /home/neo/Programming/lockfree-data-structures/libraries/C/lib/lockfree-linked-list/build/CMakeFiles/lockfree_linked_list.dir
+/home/neo/Programming/lockfree-data-structures/libraries/C/lib/lockfree-linked-list/build/CMakeFiles/lockfree_linked_list_singly.dir
+/home/neo/Programming/lockfree-data-structures/libraries/C/lib/lockfree-linked-list/build/CMakeFiles/lockfree_linked_list_doubly.dir
+/home/neo/Programming/lockfree-data-structures/libraries/C/lib/lockfree-linked-list/build/CMakeFiles/lockfree_linked_list_singly_cursor.dir
+/home/neo/Programming/lockfree-data-structures/libraries/C/lib/lockfree-linked-list/build/CMakeFiles/lockfree_linked_list_doubly_cursor.dir
 /home/neo/Programming/lockfree-data-structures/libraries/C/lib/lockfree-linked-list/build/CMakeFiles/ldraconic.dir
 /home/neo/Programming/lockfree-data-structures/libraries/C/lib/lockfree-linked-list/build/CMakeFiles/lsingly.dir
 /home/neo/Programming/lockfree-data-structures/libraries/C/lib/lockfree-linked-list/build/CMakeFiles/ldoubly.dir

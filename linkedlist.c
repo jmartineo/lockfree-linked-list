@@ -20,6 +20,13 @@
 // Memory model
 //#define SC
 
+#ifdef COUNTERS
+#define INC(_c) ((_c)++)
+#else
+#define INC(_c)
+#endif
+
+
 #define UNMARK_MASK ~1
 #define MARK_BIT 0x0000000000001
 

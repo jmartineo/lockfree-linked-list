@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/lsingly_cursor_fetch.dir/link.d"
   "CMakeFiles/lsingly_cursor_fetch.dir/linkedlist.c.o"
   "CMakeFiles/lsingly_cursor_fetch.dir/linkedlist.c.o.d"
   "CMakeFiles/lsingly_cursor_fetch.dir/listbench.c.o"

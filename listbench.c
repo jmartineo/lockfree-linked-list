@@ -17,6 +17,12 @@
 #define MILLI 1000.0
 #define KOPS  1000
 
+#ifdef COUNTERS
+#define INC(_c) ((_c)++)
+#else
+#define INC(_c)
+#endif
+
 //#define TEST(_A) assert(_A) // just _A when shared with overlap
 #define TEST(_A) if (!(_A)) printf("Line %d: t %d key %ld\n",__LINE__,t,key)
 //#define TEST(_A) assert( _A)
