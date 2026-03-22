@@ -1,1 +1,1 @@
-/usr/bin/cc -fopenmp -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/ldoubly.dir/link.d CMakeFiles/ldoubly.dir/linkedlist.c.o CMakeFiles/ldoubly.dir/listbench.c.o -o ldoubly  -latomic
+/usr/bin/cc -fopenmp -Wl,--dependency-file=CMakeFiles/ldoubly.dir/link.d CMakeFiles/ldoubly.dir/linkedlist.c.o CMakeFiles/ldoubly.dir/listbench.c.o -o ldoubly  -latomic

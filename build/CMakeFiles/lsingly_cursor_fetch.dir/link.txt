@@ -1,1 +1,1 @@
-/usr/bin/cc -fopenmp -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/lsingly_cursor_fetch.dir/link.d CMakeFiles/lsingly_cursor_fetch.dir/linkedlist.c.o CMakeFiles/lsingly_cursor_fetch.dir/listbench.c.o -o lsingly_cursor_fetch  -latomic
+/usr/bin/cc -fopenmp -Wl,--dependency-file=CMakeFiles/lsingly_cursor_fetch.dir/link.d CMakeFiles/lsingly_cursor_fetch.dir/linkedlist.c.o CMakeFiles/lsingly_cursor_fetch.dir/listbench.c.o -o lsingly_cursor_fetch  -latomic

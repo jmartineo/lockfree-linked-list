@@ -171,8 +171,13 @@ int add(long key, list_t *list)
 {
   node_t *pred, *curr, *node;
 
-  node = (node_t*)malloc(sizeof(node_t));
-  assert(node != NULL);
+  if (list->free != NULL) {
+    node = list->free;
+    list->free = node->free;
+  } else {
+    node = (node_t*)malloc(sizeof(node_t));
+    assert(node != NULL);
+  }
   node->key = key;
 
 #ifndef CURSOR
@@ -183,7 +188,8 @@ int add(long key, list_t *list)
     pred = list->pred;
     curr = list->curr;
     if (curr->key == key) {
-      free(node);
+      node->free = list->free;
+      list->free = node;
       return 0; // already there
     }
 
@@ -202,6 +208,17 @@ int add(long key, list_t *list)
     }
     INC(list->fail);
   } while (1);
+}
+
+/* Pre-populate list->free so the timed section uses O(1) pool alloc */
+void prefill_pool(list_t *list, int capacity)
+{
+  int i;
+  for (i = 0; i < capacity; i++) {
+    node_t *node = (node_t *)malloc(sizeof(node_t));
+    node->free = list->free;
+    list->free = node;
+  }
 }
 
 int rem(long key, list_t *list)

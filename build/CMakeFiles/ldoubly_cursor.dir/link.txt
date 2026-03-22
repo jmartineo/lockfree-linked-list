@@ -1,1 +1,1 @@
-/usr/bin/cc -fopenmp -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/ldoubly_cursor.dir/link.d CMakeFiles/ldoubly_cursor.dir/linkedlist.c.o CMakeFiles/ldoubly_cursor.dir/listbench.c.o -o ldoubly_cursor  -latomic
+/usr/bin/cc -fopenmp -Wl,--dependency-file=CMakeFiles/ldoubly_cursor.dir/link.d CMakeFiles/ldoubly_cursor.dir/linkedlist.c.o CMakeFiles/ldoubly_cursor.dir/listbench.c.o -o ldoubly_cursor  -latomic

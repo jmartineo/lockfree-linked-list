@@ -1,1 +1,1 @@
-/usr/bin/cc -fPIC -fopenmp -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/lockfree_linked_list.dir/link.d -shared -Wl,-soname,liblockfree_linked_list.so -o liblockfree_linked_list.so CMakeFiles/lockfree_linked_list.dir/linkedlist.c.o CMakeFiles/lockfree_linked_list.dir/listbench.c.o  -latomic
+/usr/bin/cc -fPIC -fopenmp -shared -Wl,--dependency-file=CMakeFiles/lockfree_linked_list.dir/link.d -Wl,-soname,liblockfree_linked_list.so -o liblockfree_linked_list.so CMakeFiles/lockfree_linked_list.dir/linkedlist.c.o CMakeFiles/lockfree_linked_list.dir/listbench.c.o  -latomic

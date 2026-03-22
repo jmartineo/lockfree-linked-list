@@ -1,1 +1,1 @@
-/usr/bin/cc -fopenmp -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/ldraconic.dir/link.d CMakeFiles/ldraconic.dir/linkedlist.c.o CMakeFiles/ldraconic.dir/listbench.c.o -o ldraconic  -latomic
+/usr/bin/cc -fopenmp -Wl,--dependency-file=CMakeFiles/ldraconic.dir/link.d CMakeFiles/ldraconic.dir/linkedlist.c.o CMakeFiles/ldraconic.dir/listbench.c.o -o ldraconic  -latomic

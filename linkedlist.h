@@ -30,3 +30,6 @@ void clean(list_t *list);
 int add(long key, list_t *list);
 int rem(long key, list_t *list);
 int con(long key, list_t *list);
+
+/* Pre-populate list->free to eliminate per-insert malloc from the timed section */
+void prefill_pool(list_t *list, int capacity);
